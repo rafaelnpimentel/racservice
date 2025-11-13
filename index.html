@@ -96,8 +96,7 @@
     </section>
 
     <section class="internacional" id="internacional">
-    <h2 class="titulo-section-internacional">Estrutura Internacional</h2>
-        
+        <h2 class="titulo-section-internacional">Estrutura Internacional</h2>
         <div class="internacional-content">
             <div class="internacional-header">
                 <p class="description">Nosso padrão de campo atravessa fronteiras.<br>Técnicos locais, controle central e operação 24h com base no Brasil.</p>
@@ -146,6 +145,16 @@
                 A RacService está pronta para operar com eficiência em qualquer parte do mundo - mantendo o mesmo nível de qualidade e controle
             </p>
         </div>
+    </section>
+
+        <section class="internacional-desktop" id="internacional">
+        <h2 class="titulo-section-internacional-desktop">Estrutura Internacional</h2>
+                     <p class="description-desktop">Nosso padrão de campo atravessa fronteiras.<br>Técnicos locais, controle central e operação 24h com base no Brasil.</p>
+            </div>
+         <img src="images/Planet-desktop.svg"  class="planeta-desktop" id="internacional">
+            <p class="description internacional-footer">
+                A RacService está pronta para operar com eficiência <strong>em qualquer parte do mundo </strong>- mantendo o mesmo nível de qualidade e controle.
+            </p>        </div>
     </section>
 
     <section class="modelo" id="servicos">
@@ -262,7 +271,19 @@
   const menuLinks = document.querySelectorAll('.lista-menu__link');
   
   menuLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      // Se for uma âncora (não é #), fazer scroll suave
+      if (href && href.startsWith('#') && href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      
+      // Fechar menu mobile
       menuCheckbox.checked = false;
     });
   });
