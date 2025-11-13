@@ -49,7 +49,7 @@ section {
 /*  HERO */
 
 .hero {
-background-image: url(./images/RacService-background-hero-mobile.png);
+  background-image: url(../images/RacService-background-hero-mobile.png);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -131,10 +131,9 @@ strong {
 }
 
 @media screen and (min-width:1024px) {
-
   .hero{
-    background-image: url(./images/RacService-background-hero-desk.png);
-    }
+    background-image: url(../images/RacService-background-hero-desk.png);
+  }
 
  .hero-box {
     width: 700px;
@@ -653,4 +652,5 @@ strong {
         padding-top: 96px;
         background-image: url(none);
     }
+
 }
