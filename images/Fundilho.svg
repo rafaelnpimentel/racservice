@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1785 780">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #eb7234;
+        stroke: #eb7234;
+        stroke-width: 4px;
+      }
+
+      .st1 {
+        fill: #04375f;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M1785,351.7c-271.9,74.4-694.1,116.6-973.7-104.1C470.4-21.4,125.4,0-4.5,44.4l113.1,735.6h1543.1l133.3-5.7v-422.6Z"/>
+  <path class="st0" d="M1785,780v-316.4c-302.8,7.9-627.9-26.3-844.5-158.4C601.7,98.8,215.4,74.3,0,92.5v687.5h1785Z"/>
+</svg>

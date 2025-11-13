@@ -1,0 +1,140 @@
+.carrossection {
+  padding-bottom: 102px;
+  background-color: var(--transparente-azul);
+  color: var(--azul-principal);
+   display: flex;
+    flex-direction: column;
+    margin: 64px 16px;
+    padding: 24px 32px;
+    border-radius: 32px;
+    gap: 24px;
+}
+
+.modelo {
+    display: flex;
+    flex-direction: column;
+    margin: 64px 16px;
+    padding: 24px 32px;
+    border-radius: 32px;
+    gap: 24px;
+}
+
+.modelo h3{
+    line-height: 1.75rem;
+}
+
+.fluxo-desktop {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .fluxo-desktop {
+        display: block;
+    }
+
+    .fluxo-mobile {
+        display: none;
+    }
+
+    .modelo h3, h6{
+    line-height: 2.5rem;
+    }
+
+    .modelo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 102px auto;
+    padding: 32px 48px;
+    border-radius: 32px;
+    gap: 24px;
+    }
+}
+
+
+  .swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Slide: image on top (only top half visible) + text below */
+    .swiper-slide {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 320px;
+      max-width: 100%;
+      background: transparent;
+      border: 2px solid var(--cor-primaria);
+      border-radius: 16px;
+      overflow: hidden;
+      height: auto;
+      margin-top: 36px;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 160px; /* shows top half of a 320px image */
+      overflow: hidden;
+    }
+
+    .slide-image img {
+      width: 100%;
+      height: 320px; /* double the wrapper so only top half is visible */
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .slide-content {
+      padding: 16px;
+    }
+
+    .swiper-slide-title {
+      font-family: 'paralucent', sans-serif;
+      color: var(--cor-primaria);
+      font-weight: 600;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .texto-carrossel {
+      font-weight: 600;
+      color: var(--cor-primaria);
+      margin: 8px 16px 8px 16px;
+      font-size: 1.5rem;
+    }
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .carrossection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 102px auto;
+    padding: 32px 48px;
+    border-radius: 32px;
+    gap: 24px;
+  }
+
+      .texto-carrossel {
+      font-weight: 600;
+      color: var(--cor-primaria);
+      margin: 16px 32px 16px 32px;
+      font-size: 2rem;
+          line-height: 2.5rem;
+    }
+
+
+}
+
+ 

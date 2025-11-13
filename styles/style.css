@@ -1,0 +1,656 @@
+@import url(style.css/header.css);
+
+:root {
+    --cor-primaria: #eb7234;
+    --cor-primaria-hover: #bf531b;
+    --cor-secundaria: #04375f;
+    --cor-p: #67381f;
+    --branco: #f1f1f1;
+    --cinza-rac: #3c3c3b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box;
+letter-spacing: 0.1rem;
+margin: 0;
+padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+p {
+    color:var(--cor-p)
+}
+
+body {
+    background-color: var(--branco);
+    font-family: 'paralucent', sans-serif;
+    font-size: 16px;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 17px;
+}
+
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/*  HERO */
+
+.hero {
+background-image: url(./images/RacService-background-hero-mobile.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+
+.hero-box {
+background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 16px;
+            width: var(--planeta-width);
+  left: 16px;
+  right: 16px;
+  padding: 24px 32px;
+  border-radius: 32px;
+  gap: 24px;
+}
+
+.titulo-mega {
+    font-size: 2rem ;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.description {
+    font-size: 0.875rem;
+    font-weight: 200;
+    letter-spacing: 0.15rem;
+    line-height:120% ;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.botao-hero {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    line-height:120%;
+    gap: 8px;
+}
+
+.botao-padrao {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    border-radius: 16px;
+    padding: 20px 24px;
+        color: white;
+}
+
+.botao-padrao:hover {
+    background-color: var(--cor-primaria-hover) ;
+    cursor: pointer;
+}
+
+.botao-seco {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 16px;
+    padding: 20px 24px;
+    color: var(--cor-primaria);
+}
+
+.botao-seco:hover {
+    background-color: var(--branco) ;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1024px) {
+
+  .hero{
+    background-image: url(./images/RacService-background-hero-desk.png);
+    }
+
+ .hero-box {
+    width: 700px;
+    margin-top: 10vh;
+    margin-left: 15%;
+    padding: 48px;
+    gap:32px;
+    border-radius: 32px;
+ }
+
+ .titulo-mega {
+    font-size: 3rem;
+ }
+
+ .description, .botao-hero, .botao-padrao {
+    font-size: 1.25rem;
+ }
+}
+
+
+/*////////////////////* QUEM SOMOS */
+
+
+
+.titulo-section {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria)
+}
+
+.quem-somos {
+    background-color: var(--cor-primaria);
+    padding-top: 10px;
+    padding-bottom: 64px;
+}
+
+.quem-somos-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    margin: 32px 16px;
+    padding: 24px 32px;
+    border-radius: 32px;
+    gap: 24px;
+}
+
+
+.icons-quem-somos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.icon-quem-somos {
+    height:48px;
+}
+
+.icon-boxinha {
+    background-color: var(--cor-primaria);
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    gap: 16px;
+    padding: 16px;
+}
+
+.icon-text {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 200;
+    line-height: 1rem;
+    letter-spacing: 0.12rem;
+    }
+
+.quem-desktop {
+    display: none;
+}
+
+.tiozao {display: none;}
+
+    @media screen and (min-width:1024px) {
+    
+    .titulo-section {
+    font-size: 2.3rem;
+    }
+
+.quem-desktop {
+    display: block;
+} 
+
+.quem-mobile {
+    display: none;
+}
+
+.tiozao {
+    display: flex;
+    max-width:400px;
+    height: auto;
+}
+
+.quem-somos-img{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    padding-top: 102px;
+}
+
+.quem-somos {
+    padding-bottom: 102px;
+}
+
+.quem-somos-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border: 2px solid var(--cor-primaria);
+    width: 664px;
+    color: var(--cor-primaria);
+    margin: 32px 16px;
+    padding: 32px 48px;
+    border-radius: 32px;
+    gap: 24px;
+}
+
+
+.icons-quem-somos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-top: 56px;
+    gap: 16px;
+    justify-content: center;
+}
+
+.icon-quem-somos {
+    height: 80px;
+    width: auto;
+}
+
+.icon-boxinha {
+    background-color: var(--cor-primaria);
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    gap: 16px;
+    padding: 16px;
+}
+
+.icon-text {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    letter-spacing: 0.12rem;
+    }
+}
+
+/*//////////////////    /* MODELO */
+
+.modelo {
+    display: flex;
+    flex-direction: column;
+    margin: 64px 16px;
+    padding: 24px 32px;
+    border-radius: 32px;
+    gap: 24px;
+}
+
+.modelo h3{
+    line-height: 1.75rem;
+}
+
+.fluxo-desktop {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .fluxo-desktop {
+        display: block;
+    }
+
+    .fluxo-mobile {
+        display: none;
+    }
+
+    .modelo h3{
+    line-height: 2.5rem;
+    }
+
+    .modelo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 102px auto;
+    padding: 32px 48px;
+    border-radius: 32px;
+    gap: 24px;
+    }
+}
+
+
+/*////////////////////////INTERNACIONAL */
+
+.internacional {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 48px 32px;
+}
+
+.internacional .titulo-section-internacional {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.internacional-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.internacional-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.internacional-header .description {
+    color: white;
+    max-width: 60%;
+}
+
+.itens-internacional {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.planeta-mobile {
+    height: 182px;
+    display: block;
+}
+
+.planeta-desktop {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.item-internacional {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.item-internacional h5 {
+    width: 180px;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.linha {
+    border-right: solid white 2px;
+    height: 20px;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.item-internacional .description {
+    color: white;
+    flex: 1;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.internacional-footer {
+    color: white;
+    text-align: center;
+    margin-top: 64px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.internacional-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .internacional {
+        display: none;
+    }
+
+    .internacional-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: var(--cor-primaria);
+        padding: 80px 0 80px 0;
+        border-radius: 36px;
+        width: 90vw;
+    }
+
+    .internacional-content-desktop {
+        width: 1385px;
+        height: 927px;
+        margin: 0 auto;
+        padding: 48px;
+        text-align: center;
+    }
+
+    .titulo-section-internacional-desktop {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 24px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .description-desktop {
+        color: white;
+        font-size: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto 48px;
+        text-align: center;
+            line-height: 1.4;
+    }
+
+    .planeta-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70vw;
+        margin: -5% auto -5% auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .internacional-desktop {
+        width: 80vw;
+    }
+    .planeta-desktop {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .internacional-desktop {
+        width: 70vw;
+    }
+    .planeta-desktop {
+        width: 50vw;
+    }
+}
+
+/* /////////////////////////////////// APP */ 
+
+.app {
+    position: relative;
+}
+
+.fundo-laranja {
+    background-color: var(--cor-primaria);
+    border-radius: 16px;
+    padding: 40px 158px 40px 40px;
+    width: 80vw;
+    height: auto;
+    margin: 64px 64px;
+    justify-content: center;
+    position: relative;
+}
+
+.app-text {
+    color: white;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.RacPhone {
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    width: 300px;
+    max-width: 50vw;
+    z-index: 2;
+}
+
+@media screen and (min-width:1400px) {
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    }  
+
+.app-text {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    
+}
+
+.fundo-laranja {
+        padding: 40px 40% 40px 10%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: var(--cor-primaria);
+        border-radius: 16px;
+        width: 43vw;
+}   
+
+.RacPhone {
+    right:50px;
+    width:400px;
+    max-width: 70vw;
+    bottom:-90px;
+}
+}
+
+/*//////////////////////// CONTATO */
+
+.titulinho {
+    font-family: 'Paralucent', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: -1%;
+}
+
+.contato {
+    background-image: url(/images/Fundilho.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.contato-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 0 auto;
+    width: 90vw;
+    padding: 32px 16px 32px 16px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    gap:8px;
+}
+
+.campo {
+    padding:8px;
+    border-radius: 8px;
+    border-color: #f1f1f1;
+}
+
+.mensagem {
+    padding: 8px 8px 80px 8px;
+    border-radius: 8px;
+    border-color: #f1f1f1;
+    margin-bottom: 16px;
+}
+
+.contato {
+    background-image: url(/images/Fundilho.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+}
+
+.contato a {
+    margin: 0 auto;
+    width: 102px;
+    padding: 16px 80px;
+}
+
+@media screen and (min-width:1400px) {
+    .contato-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 0 auto;
+    width: 43vw;
+    padding: 32px 64px 32px 64px;
+    }
+
+    .contato {
+        padding-top: 96px;
+        background-image: url(none);
+    }
+}
