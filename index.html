@@ -32,7 +32,7 @@
                 <a href="#" class="lista-menu__link">Cases de Sucesso</a>
             </li>
             <li class="lista-menu__item">
-                <a href="#internacional" class="lista-menu__link">Internacional</a>
+                <a href="#internacional" class="lista-menu__link link-internacional">Internacional</a>
             </li>
             <li class="lista-menu__item">
                 <a href="#contato" class="lista-menu__link">Contato</a>
@@ -95,7 +95,7 @@
     </section>
 
     <!-- INTERNACIONAL MOBILE -->
-    <section class="internacional" id="internacional">
+    <section class="internacional" id="internacional-mobile">
         <h2 class="titulo-section-internacional">Estrutura Internacional</h2>
         <div class="internacional-content">
             <div class="internacional-header">
@@ -148,7 +148,7 @@
     </section>
 
     <!-- INTERNACIONAL DESKTOP -->
-    <section class="internacional-desktop">
+    <section class="internacional-desktop" id="internacional-desktop">
         <h2 class="titulo-section-internacional-desktop">Estrutura Internacional</h2>
         <p class="description-desktop">Nosso padrão de campo atravessa fronteiras.<br>Técnicos locais, controle central e operação 24h com base no Brasil.</p>
         <img src="images/Planet-desktop.svg" class="planeta-desktop" alt="Planeta desktop">
@@ -234,7 +234,7 @@
             <ul>
                 <li><a href="#quem-somos">Quem Somos</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#internacional">Internacional</a></li>
+                <li><a href="#internacional" class="footer-link-internacional">Internacional</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
 
@@ -280,7 +280,25 @@
     }
   });
 
-  // Fechar menu e scroll suave com comportamento condicional
+  // Função para atualizar links do Internacional baseado no tamanho da tela
+  function updateInternacionalLinks() {
+    const menuLink = document.querySelector('.link-internacional');
+    const footerLink = document.querySelector('.footer-link-internacional');
+    
+    if (window.innerWidth >= 1024) {
+      if (menuLink) menuLink.setAttribute('href', '#internacional-desktop');
+      if (footerLink) footerLink.setAttribute('href', '#internacional-desktop');
+    } else {
+      if (menuLink) menuLink.setAttribute('href', '#internacional-mobile');
+      if (footerLink) footerLink.setAttribute('href', '#internacional-mobile');
+    }
+  }
+
+  // Atualizar links ao carregar e ao redimensionar
+  updateInternacionalLinks();
+  window.addEventListener('resize', updateInternacionalLinks);
+
+  // Fechar menu e scroll suave
   const menuCheckbox = document.getElementById('menu');
   const menuLinks = document.querySelectorAll('.lista-menu__link');
 
@@ -288,13 +306,6 @@
     link.addEventListener('click', function (e) {
       e.preventDefault();
       let href = this.getAttribute('href');
-
-      // Se for o link "Internacional"
-      if (href === '#internacional') {
-        if (window.innerWidth >= 1024) {
-          href = '#internacional-desktop';
-        }
-      }
 
       // Scroll suave
       if (href && href.startsWith('#') && href !== '#') {
@@ -306,6 +317,22 @@
 
       // Fechar menu mobile
       menuCheckbox.checked = false;
+    });
+  });
+
+  // Scroll suave para links do footer
+  const footerLinks = document.querySelectorAll('.footer-link-internacional');
+  footerLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      let href = this.getAttribute('href');
+      
+      if (href && href.startsWith('#') && href !== '#') {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     });
   });
 </script>
