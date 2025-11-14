@@ -154,8 +154,7 @@ header {
     padding: 40px 10%;
     font-size: 14px;
     line-height: 1.6;
-    margin-top: 88px;
-}
+    }
 
 .footer-container {
     display: flex;
@@ -840,3 +839,4 @@ strong {
         padding-top: 96px;
     }
 }
+
