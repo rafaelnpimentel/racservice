@@ -44,6 +44,7 @@ section {
     scroll-margin-top: 80px;
 }
 
+/* ==================== HEADER ==================== */
 
 header {
     display: flex;
@@ -55,22 +56,23 @@ header {
 }
 
 .menu-hamburguer {
-  display: block;
-  position: relative;
-  z-index: 1001;
-  cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
 }
 
 .lista-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  z-index: 1000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+    display: none;
 }
 
 .container-botao:checked~.lista-menu {
-display: block;
+    display: block;
 }
 
 .container-botao {
@@ -93,24 +95,46 @@ display: block;
     font-weight: 400;
     line-height: 1rem;
 }
+
 .lista-menu__item:hover {
     background: var(--laranja-degrade);
     color: var(--cor-primaria);
     border-radius: 16px;
 }
 
-@media (min-width: 1024px) {
-  .menu-hamburguer {
+#internacional-desktop {
     display: none;
-  }
-  .lista-menu {
-    display: flex !important;
-    position: static;
-    background: none;
-  }
+}
+
+@media (min-width: 1024px) {
+    #internacional-desktop {
+        display: block;
+    }
+
+    #internacional-mobile {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .lista-menu {
+        display: flex !important;
+        position: static;
+        background: none;
+        flex-direction: row;
+        gap: 2rem;
+        margin-right: 5%;
+    }
 
     .lista-menu__item {
         background-color: transparent;
+        padding: 0.5rem 1rem;
     }
 
     .lista-menu__titulo {
@@ -118,122 +142,115 @@ display: block;
     }
 
     .logo-header {
- margin-left: 5%;
+        margin-left: 5%;
     }
 }
 
-
-/*///////////////// FOOTER */
+/* ==================== FOOTER ==================== */
 
 .footer {
-  background-color: #f8f9fa;
-  color: #222;
-  padding: 40px 10%;
-  font-size: 14px;
-  line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #222;
+    padding: 40px 10%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 88px;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .footer-col {
-  flex: 1 1 300px;
-  min-width: 280px;
+    flex: 1 1 300px;
+    min-width: 280px;
 }
 
 .footer-logo {
-  width: 160px;
-  margin-bottom: 15px;
+    width: 160px;
+    margin-bottom: 15px;
 }
 
 .footer-col p {
-  margin: 0 0 10px;
+    margin: 0 0 10px;
 }
 
 .footer-address {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .footer-col h4 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 25px;
-  text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    text-transform: uppercase;
 }
 
 .footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-col ul li {
-  margin-bottom: 6px;
+    margin-bottom: 6px;
 }
 
 .footer-col ul li a {
-  color: #222;
-  text-decoration: none;
-  transition: 0.3s;
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: var(--cor-primaria);
+    color: var(--cor-primaria);
 }
 
 .social-icons {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0 25px;
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 25px;
 }
 
 .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  color: #fff;
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 .social-icons a:hover {
-  background: var(--cor-primaria);
-  color: #000;
+    background: var(--cor-primaria);
+    color: #000;
 }
 
 .inmetro-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .inmetro-logo {
-  width: 50px;
-  height: auto;
+    width: 50px;
+    height: auto;
 }
-
-
 
 @media (max-width: 1400px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 40px;
-  }
-}
-
-
-.footer {
-    margin-top: 88px;
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 /* ==================== HERO ==================== */
